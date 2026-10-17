@@ -11,7 +11,7 @@ window.PREPARATY = {
           stain: "гематоксилин и эозин",
           tetrad: "В тетради — микропрепарат № 86 «Творожистый некроз в лёгком при туберкулёзе», занятие 2, с. 17",
           photos: [
-            { src: "img/star/mi-2-a.jpg", alt: "Казеозный некроз в лёгком при туберкулёзе (Wikimedia Commons)", credit: 'Оба фото не из папки кафедры: Yale Rosen, <a href="https://commons.wikimedia.org/wiki/File:Pulmonary_tuberculosis_-_Necrotizing_granuloma_(6545186957).jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, лицензия <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.ru" target="_blank" rel="noopener">CC BY-SA 2.0</a>, уменьшено. Ещё пример — <a href="https://webpath.med.utah.edu/CINJHTML/CINJ030.html" target="_blank" rel="noopener">WebPath</a>.' },
+            { src: "img/star/mi-2-a.jpg", alt: "Казеозный некроз в лёгком при туберкулёзе (Wikimedia Commons)", credit: 'Yale Rosen, <a href="https://commons.wikimedia.org/wiki/File:Pulmonary_tuberculosis_-_Necrotizing_granuloma_(6545186957).jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, лицензия <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.ru" target="_blank" rel="noopener">CC BY-SA 2.0</a>, уменьшено. Ещё пример — <a href="https://webpath.med.utah.edu/CINJHTML/CINJ030.html" target="_blank" rel="noopener">WebPath</a>.' },
             { src: "img/star/mi-2-b.jpg", alt: "Туберкулёзная гранулёма с казеозом в центре (Wikimedia Commons)" }
           ],
           opis: `<p>В центре препарата — участок <u>творожистого (казеозного) некроза</u>: <u>бесструктурная зернистая масса</u>, внутри и по периферии которой разбросаны остатки ядер лимфоцитов и лейкоцитов. Граница некроза выражена недостаточно ясно.</p>
@@ -32,7 +32,7 @@ window.PREPARATY = {
           stain: "гематоксилин и эозин",
           tetrad: "Тетрадь: занятие 2, с. 17–18",
           photos: [
-            { src: "img/star/mi-4.jpg", alt: "Инфаркт головного мозга, малое увеличение (Wikimedia Commons)", credit: 'Фото не из папки кафедры: Mikael Häggström, <a href="https://commons.wikimedia.org/wiki/File:Histopathology_of_a_lacunar_cerebral_infarct.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, CC0 (лакунарный инфаркт таламуса, малое увеличение). Ближе к препарату кафедры — <a href="https://webpath.med.utah.edu/CINJHTML/CINJ022.html" target="_blank" rel="noopener">WebPath</a>.' }
+            { src: "img/star/mi-4.jpg", alt: "Инфаркт головного мозга, малое увеличение (Wikimedia Commons)", note: 'Лакунарный инфаркт таламуса, малое увеличение.', credit: 'Mikael Häggström, <a href="https://commons.wikimedia.org/wiki/File:Histopathology_of_a_lacunar_cerebral_infarct.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, CC0. Ближе к препарату кафедры — <a href="https://webpath.med.utah.edu/CINJHTML/CINJ022.html" target="_blank" rel="noopener">WebPath</a>.' }
           ],
           opis: `<p>В центре препарата — очаг неправильной формы: <u>зона разрежения ткани</u> гомогенного розового цвета, <u>без ядер</u>. Вокруг некроза — пролиферирующая макроглия и скопления округлых макрофагов с глыбками тканевого детрита в цитоплазме — <u>«зернистые шары»</u>.</p>
 <p>Вокруг сосудов и нейронов — оптически пустые ободки: <u>периваскулярный и перицеллюлярный отёк</u> ткани мозга.</p>`,
@@ -520,7 +520,7 @@ window.PREPARATY = {
           name: "Гиалиноз капсулы селезёнки",
           tetrad: "Тетрадь: занятие 4, с. 34",
           photos: [
-            { src: "img/star/ma-8-micro.jpg", alt: "Гиалиноз капсулы селезёнки под микроскопом (Wikimedia Commons)", credit: 'Макрофото препарата в свободном доступе не нашлось. Здесь — <b>микроскопия</b> того же процесса: под капсулой толстый слой розового гиалина. Nephron, <a href="https://commons.wikimedia.org/wiki/File:Spleen_hyaloserositis_-_low_mag.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, лицензия <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.ru" target="_blank" rel="noopener">CC BY-SA 3.0</a>, уменьшено.' }
+            { src: "img/star/ma-8-micro.jpg", alt: "Гиалиноз капсулы селезёнки под микроскопом (Wikimedia Commons)", note: 'Макрофото препарата в свободном доступе не нашлось. Здесь — <b>микроскопия</b> того же процесса: под капсулой толстый слой розового гиалина.', credit: 'Nephron, <a href="https://commons.wikimedia.org/wiki/File:Spleen_hyaloserositis_-_low_mag.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, лицензия <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.ru" target="_blank" rel="noopener">CC BY-SA 3.0</a>, уменьшено.' }
           ],
           opis: `<p>Селезёнка обычных размеров и формы, мягко-эластической консистенции. Капсула морщинистая; на диафрагмальной поверхности — участок неправильной формы около 5×3 см с чёткими границами, <u>бело-розовый с перламутровым оттенком</u>, <u>хрящевидной плотности</u>, толщиной 1–3 мм.</p>
 <p>Очаг образован отложением гиалиноподобных масс в результате <u>хронического воспаления капсулы (периспленита)</u>. Процесс <u>необратим</u>, но функция органа не страдает.</p>`,
