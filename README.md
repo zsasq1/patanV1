@@ -19,6 +19,10 @@
   - Mikael Häggström — [Histopathology of a lacunar cerebral infarct](https://commons.wikimedia.org/wiki/File:Histopathology_of_a_lacunar_cerebral_infarct.jpg), CC0;
   - Nephron — [Spleen hyaloserositis](https://commons.wikimedia.org/wiki/File:Spleen_hyaloserositis_-_low_mag.jpg), CC BY-SA 3.0.
 
+## Дизайн
+
+Собран по скилу [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): стиль Minimalism & Swiss Style, палитра Academic Journal (тёмно-синий `#1E3A5F`, фон `#F8FAFC`, золотой акцент `#B45309` для ★). Шрифты — Source Serif 4 в заголовках и Source Sans 3 в тексте: пара скила для академических сайтов (Crimson Pro + Atkinson Hyperlegible) не поддерживает кириллицу. Контраст всех пар цветов не ниже 4.5:1, кнопки не меньше 44 px, иконки SVG.
+
 ## Как устроено
 
 Статический сайт без сборки: `index.html`, `voprosy/index.html`, `assets/` (стиль и скрипт), `data/` (тексты препаратов и ответов), `img/`. Чтобы поправить текст, меняйте `data/preparaty.js` или `data/voprosy.js`.

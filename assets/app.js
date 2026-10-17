@@ -172,10 +172,10 @@
         var j = Math.floor(Math.random() * (i + 1));
         var t = all[i]; all[i] = all[j]; all[j] = t;
       }
-      html = '<section data-group><h2 class="group-title">Вперемешку</h2>' + all.map(prepCard).join("") + "</section>";
+      html = '<section data-group><h2 class="group-title">Вперемешку <span class="count">' + all.length + "</span></h2>" + all.map(prepCard).join("") + "</section>";
     } else {
       html = groups.map(function (g) {
-        return '<section data-group><h2 class="group-title">' + g.group + "</h2>" + g.items.map(prepCard).join("") + "</section>";
+        return '<section data-group><h2 class="group-title">' + g.group + ' <span class="count">' + g.items.length + "</span></h2>" + g.items.map(prepCard).join("") + "</section>";
       }).join("");
     }
     out.innerHTML = html;
@@ -249,7 +249,7 @@
         return '<a href="#' + s.id + '">' + s.title + ' <span class="n">' + first + "–" + last + "</span></a>";
       }).join("");
       listEl.innerHTML = V.map(function (s) {
-        return '<section data-group id="' + s.id + '"><h2 class="group-title">' + s.title + "</h2>" +
+        return '<section data-group id="' + s.id + '"><h2 class="group-title">' + s.title + ' <span class="count">' + s.items.length + "</span></h2>" +
           s.items.map(function (it) {
             total++;
             var chips = (it.preps || []).filter(function (id) { return byId[id]; }).map(function (id) {
@@ -283,9 +283,9 @@
   lb.setAttribute("role", "dialog");
   lb.setAttribute("aria-modal", "true");
   lb.setAttribute("aria-label", "Просмотр фото");
-  lb.innerHTML = '<img alt=""><button class="lb-close" type="button" aria-label="Закрыть">✕</button>' +
-    '<div class="lb-bar"><button class="lb-prev" type="button" aria-label="Предыдущее фото">‹</button>' +
-    '<span class="lb-cap"></span><button class="lb-next" type="button" aria-label="Следующее фото">›</button></div>';
+  lb.innerHTML = '<img alt=""><button class="lb-close" type="button" aria-label="Закрыть"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>' +
+    '<div class="lb-bar"><button class="lb-prev" type="button" aria-label="Предыдущее фото"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>' +
+    '<span class="lb-cap"></span><button class="lb-next" type="button" aria-label="Следующее фото"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div>';
   document.body.appendChild(lb);
   var lbImg = $("img", lb), lbCap = $(".lb-cap", lb);
   var gallery = [], gi = 0, scale = 1, tx = 0, ty = 0;
