@@ -30,9 +30,39 @@
   /* ---------- самопроверка ---------- */
   var quizBtn = $("#quiz");
   var shuffleBtn = $("#shuffle");
+
+  /* плавающий глазик: виден, только когда кнопка самопроверки в шапке ушла за экран */
+  var fab = null;
+  if (quizBtn) {
+    fab = document.createElement("button");
+    fab.type = "button";
+    fab.className = "fab";
+    fab.setAttribute("aria-label", "Самопроверка");
+    fab.setAttribute("title", "Самопроверка");
+    fab.setAttribute("aria-pressed", "false");
+    var eye = quizBtn.querySelector("svg");
+    fab.innerHTML = eye ? eye.outerHTML : "";
+    document.body.appendChild(fab);
+    fab.addEventListener("click", function () {
+      // держим на месте карточку, которую сейчас читают, — высота карточек меняется
+      var anchor = $all(".prep, .qa").filter(function (el) {
+        return !el.hidden && el.getBoundingClientRect().bottom > 0;
+      })[0];
+      var before = anchor ? anchor.getBoundingClientRect().top : 0;
+      setQuiz(!document.body.classList.contains("quiz"));
+      if (anchor) window.scrollBy(0, anchor.getBoundingClientRect().top - before);
+    });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        fab.classList.toggle("show", !entries[0].isIntersecting);
+      }).observe(quizBtn);
+    }
+  }
+
   function setQuiz(on) {
     document.body.classList.toggle("quiz", on);
     if (quizBtn) quizBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    if (fab) fab.setAttribute("aria-pressed", on ? "true" : "false");
     if (shuffleBtn) shuffleBtn.hidden = !on;
     $all(".open").forEach(function (el) { el.classList.remove("open"); });
     save("quiz-" + page, on ? "1" : "0");
